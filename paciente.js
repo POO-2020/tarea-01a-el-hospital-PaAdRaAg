@@ -1,5 +1,7 @@
 import Nombre from "./nombre.js"
 
-class Paciente{
-    constructor(nombre, fechaNacimiento, telefono)
+export default class Paciente{
+    constructor(nombre, fechaNacimiento, telefono){
+        this.nombre = nombre
+    }
 }

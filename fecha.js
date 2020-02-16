@@ -1,4 +1,4 @@
-class Fecha {
+export default class Fecha {
 
     getAños(){
 
