@@ -36,11 +36,11 @@ export default class Fecha {
     }
 
     getFecha(){
-        return `${this.fecha.getDate()}/${this.meses[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`
+        return (`${this.fecha.getDate()}/${this.meses[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`);
     }
 
     getDiaFecha(){
-        return`${this.diaSemana[this.fecha.getDay()]}`
+        return(`${this.diaSemana[this.fecha.getDay()]}`);
     }
 
 }
