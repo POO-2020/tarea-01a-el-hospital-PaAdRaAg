@@ -6,35 +6,49 @@ export default class Fecha {
      * @param {number} año 
      */
     constructor(dia, mes, año){
-        this.fecha = new Date(año, mes - 1, dia);
+        this.fecha = new Date(año, mes -1, dia);
         this.diaSemana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-        this.diaMes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        this.fecha2 = new Date(año, mes - 1, dia);
+        this.meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
     }
 
     getAños(){
-        let años = (this.fecha.getFullYear() - this.fecha2.getFullYear());
-        return años;
-
+        let fechaActual = new Date(Date.now());
+        let añosTranscurridos = fechaActual.getFullYear() - this.fecha.getFullYear();
+        return (`${añosTranscurridos} años.`);
     }
-    getMeses(){
-        let month = this.fecha.getMonth() + 1;
-        return month;
 
+    getMeses() {
+        let fechaActual = new Date(Date.now());
+        let añosTranscurridos = fechaActual.getFullYear() - this.fecha.getFullYear();
+        return (`${añosTranscurridos * 12} meses.`); 
     }
+
     getSemanas(){
-
+        let fechaActual = new Date(Date.now());
+        let añosTranscurridos = fechaActual.getFullYear() - this.fecha.getFullYear();
+        return (`${añosTranscurridos * 52} semanas.`);
     }
+
     getDias(){
-
+        let fechaActual = new Date(Date.now());
+        let añosTranscurridos = fechaActual.getFullYear() - this.fecha.getFullYear();
+        return (`${añosTranscurridos * 365} días`);
     }
+
     getFecha(){
-
+        return `${this.fecha.getDate()}/${this.meses[this.fecha.getMonth()]}/${this.fecha.getFullYear()}`
     }
+
     getDiaFecha(){
-
+        return`${this.diaSemana[this.fecha.getDay()]}`
     }
+
 }
 
 let fecha = new Fecha(5, 6, 2000);
 console.log(fecha.getAños());
+console.log(fecha.getMeses());
+console.log(fecha.getSemanas());
+console.log(fecha.getDias());
+console.log(fecha.getFecha());
+console.log(fecha.getDiaFecha());
