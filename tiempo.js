@@ -20,6 +20,3 @@ export default class Tiempo{
         
     }
 }
-let tiempo1 = new Tiempo(5, 21, "am");
-console.log(tiempo1.getFormato12());
-console.log(tiempo1.getFormato24());

@@ -42,13 +42,4 @@ export default class Fecha {
     getDiaFecha(){
         return(`${this.diaSemana[this.fecha.getDay()]}`);
     }
-
 }
-
-let fecha = new Fecha(5, 6, 2000);
-console.log(fecha.getAños());
-console.log(fecha.getMeses());
-console.log(fecha.getSemanas());
-console.log(fecha.getDias());
-console.log(fecha.getFecha());
-console.log(fecha.getDiaFecha());
