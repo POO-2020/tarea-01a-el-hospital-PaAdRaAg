@@ -16,7 +16,5 @@ export default class Tiempo{
     getFormato24(){
         if(this.periodo === "pm"||this.periodo === "PM"||this.periodo === "Pm"){this.hora = this.hora + 12}
         return(`${this.hora}:${this.minutos}`);
-
-        
     }
 }
